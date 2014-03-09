@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		922C7BFF18C5A6780092A7E4 /* InitStarfield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 922C7BF818C5A5E20092A7E4 /* InitStarfield.cpp */; };
+		922C7C0018C5A67A0092A7E4 /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 922C7BFA18C5A5E20092A7E4 /* Model.cpp */; };
+		922C7C0518C5D7970092A7E4 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 922C7C0418C5D7970092A7E4 /* Animation.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9215F47E18C3533C00DC8209 /* libStarfield.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStarfield.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		922C7BF618C5A5E20092A7E4 /* Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Animation.h; path = Starfield/Animation.h; sourceTree = "<group>"; };
+		922C7BF718C5A5E20092A7E4 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Data.h; path = Starfield/Data.h; sourceTree = "<group>"; };
+		922C7BF818C5A5E20092A7E4 /* InitStarfield.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = InitStarfield.cpp; path = Starfield/InitStarfield.cpp; sourceTree = "<group>"; };
+		922C7BF918C5A5E20092A7E4 /* InitStarfield.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InitStarfield.h; path = Starfield/InitStarfield.h; sourceTree = "<group>"; };
+		922C7BFA18C5A5E20092A7E4 /* Model.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Model.cpp; path = Starfield/Model.cpp; sourceTree = "<group>"; };
+		922C7BFB18C5A5E20092A7E4 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Model.h; path = Starfield/Model.h; sourceTree = "<group>"; };
+		922C7BFC18C5A5E20092A7E4 /* Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Object.h; path = Starfield/Object.h; sourceTree = "<group>"; };
+		922C7BFD18C5A5E20092A7E4 /* Starfield.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Starfield.h; path = Starfield/Starfield.h; sourceTree = "<group>"; };
+		922C7C0218C5D6DF0092A7E4 /* Points.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Points.fs; path = Shaders/Points.fs; sourceTree = "<group>"; };
+		922C7C0318C5D6DF0092A7E4 /* Points.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Points.vs; path = Shaders/Points.vs; sourceTree = "<group>"; };
+		922C7C0418C5D7970092A7E4 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Animation.cpp; path = Starfield/Animation.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9215F47B18C3533B00DC8209 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9215F47318C3530C00DC8209 = {
+			isa = PBXGroup;
+			children = (
+				922C7BF018C5A5E20092A7E4 /* Sources */,
+				9215F47F18C3533C00DC8209 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9215F47F18C3533C00DC8209 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9215F47E18C3533C00DC8209 /* libStarfield.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		922C7BF018C5A5E20092A7E4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				922C7C0118C5D6C90092A7E4 /* Shaders */,
+				922C7BFD18C5A5E20092A7E4 /* Starfield.h */,
+				922C7BFB18C5A5E20092A7E4 /* Model.h */,
+				922C7BFA18C5A5E20092A7E4 /* Model.cpp */,
+				922C7BF718C5A5E20092A7E4 /* Data.h */,
+				922C7BFC18C5A5E20092A7E4 /* Object.h */,
+				922C7BF618C5A5E20092A7E4 /* Animation.h */,
+				922C7C0418C5D7970092A7E4 /* Animation.cpp */,
+				922C7BF918C5A5E20092A7E4 /* InitStarfield.h */,
+				922C7BF818C5A5E20092A7E4 /* InitStarfield.cpp */,
+			);
+			name = Sources;
+			path = ../Sources;
+			sourceTree = "<group>";
+		};
+		922C7C0118C5D6C90092A7E4 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				922C7C0218C5D6DF0092A7E4 /* Points.fs */,
+				922C7C0318C5D6DF0092A7E4 /* Points.vs */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9215F47C18C3533B00DC8209 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9215F47D18C3533B00DC8209 /* Starfield */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9215F48018C3533C00DC8209 /* Build configuration list for PBXNativeTarget "Starfield" */;
+			buildPhases = (
+				9215F47A18C3533B00DC8209 /* Sources */,
+				9215F47B18C3533B00DC8209 /* Frameworks */,
+				9215F47C18C3533B00DC8209 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Starfield;
+			productName = Starfield;
+			productReference = 9215F47E18C3533C00DC8209 /* libStarfield.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9215F47418C3530C00DC8209 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 9215F47718C3530C00DC8209 /* Build configuration list for PBXProject "Starfield" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9215F47318C3530C00DC8209;
+			productRefGroup = 9215F47F18C3533C00DC8209 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9215F47D18C3533B00DC8209 /* Starfield */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9215F47A18C3533B00DC8209 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C7BFF18C5A6780092A7E4 /* InitStarfield.cpp in Sources */,
+				922C7C0018C5A67A0092A7E4 /* Model.cpp in Sources */,
+				922C7C0518C5D7970092A7E4 /* Animation.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9215F47818C3530C00DC8209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BOOST = /usr/local/include;
+				COLOR = ../../Color;
+				GLCPP = ../../GLCPP;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${BOOST}",
+					"${RAPIDXML}/",
+					"${REACT}/Sources/",
+					"${SCENEGRAPH}/Sources/",
+					"${GLCPP}/Sources/",
+					"${MATH}/Sources/",
+					"${RUNTIME}/Sources/",
+					"${COLOR}/Sources",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				MATH = ../../Math;
+				RAPIDXML = "../../rapidxml-1.13";
+				REACT = ../../React;
+				RUNTIME = ../../Runtime/;
+				SCENEGRAPH = ../../SceneGraph;
+			};
+			name = Debug;
+		};
+		9215F47918C3530C00DC8209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BOOST = /usr/local/include;
+				COLOR = ../../Color;
+				GLCPP = ../../GLCPP;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${BOOST}",
+					"${RAPIDXML}/",
+					"${REACT}/Sources/",
+					"${SCENEGRAPH}/Sources/",
+					"${GLCPP}/Sources/",
+					"${MATH}/Sources/",
+					"${RUNTIME}/Sources/",
+					"${COLOR}/Sources",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				MATH = ../../Math;
+				RAPIDXML = "../../rapidxml-1.13";
+				REACT = ../../React;
+				RUNTIME = ../../Runtime/;
+				SCENEGRAPH = ../../SceneGraph;
+			};
+			name = Release;
+		};
+		9215F48118C3533C00DC8209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${RAPIDXML}/",
+					"${REACT}/Sources/",
+					"${SCENEGRAPH}/Sources/",
+					"${GLCPP}/Sources/",
+					"${MATH}/Sources/",
+					"${RUNTIME}/Sources/",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../Sources,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9215F48218C3533C00DC8209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${RAPIDXML}/",
+					"${REACT}/Sources/",
+					"${SCENEGRAPH}/Sources/",
+					"${GLCPP}/Sources/",
+					"${MATH}/Sources/",
+					"${RUNTIME}/Sources/",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../Sources,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9215F47718C3530C00DC8209 /* Build configuration list for PBXProject "Starfield" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9215F47818C3530C00DC8209 /* Debug */,
+				9215F47918C3530C00DC8209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9215F48018C3533C00DC8209 /* Build configuration list for PBXNativeTarget "Starfield" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9215F48118C3533C00DC8209 /* Debug */,
+				9215F48218C3533C00DC8209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9215F47418C3530C00DC8209 /* Project object */;
+}

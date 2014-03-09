@@ -1,0 +1,11 @@
+Debug
+x64
+Release
+*.sdf
+*.opensdf
+Apple/build
+*.obj
+Win/ipch
+Thumbs.db
+xcuserdata
+.DS_Store
