@@ -153,25 +153,19 @@
 		9215F47818C3530C00DC8209 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BASE = ../../Base/;
 				BOOST = /usr/local/include;
-				COLOR = ../../Color;
 				GLCPP = ../../GLCPP;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${BOOST}",
 					"${RAPIDXML}/",
-					"${REACT}/Sources/",
 					"${SCENEGRAPH}/Sources/",
 					"${GLCPP}/Sources/",
-					"${MATH}/Sources/",
-					"${RUNTIME}/Sources/",
-					"${COLOR}/Sources",
+					"${BASE}/Sources/",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				MATH = ../../Math;
 				RAPIDXML = "../../rapidxml-1.13";
-				REACT = ../../React;
-				RUNTIME = ../../Runtime/;
 				SCENEGRAPH = ../../SceneGraph;
 			};
 			name = Debug;
@@ -179,25 +173,19 @@
 		9215F47918C3530C00DC8209 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BASE = ../../Base/;
 				BOOST = /usr/local/include;
-				COLOR = ../../Color;
 				GLCPP = ../../GLCPP;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${BOOST}",
 					"${RAPIDXML}/",
-					"${REACT}/Sources/",
 					"${SCENEGRAPH}/Sources/",
 					"${GLCPP}/Sources/",
-					"${MATH}/Sources/",
-					"${RUNTIME}/Sources/",
-					"${COLOR}/Sources",
+					"${BASE}/Sources/",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				MATH = ../../Math;
 				RAPIDXML = "../../rapidxml-1.13";
-				REACT = ../../React;
-				RUNTIME = ../../Runtime/;
 				SCENEGRAPH = ../../SceneGraph;
 			};
 			name = Release;
