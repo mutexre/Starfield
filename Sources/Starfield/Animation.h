@@ -3,27 +3,48 @@
 
 namespace Starfield
 {
-    class Animation : public React::Animation<float, Animation>
+    template <typename T, typename F>
+    class Animation : public React::Transform<Animation<T, F>>
     {
+        REACT_DEFINE_INPUT(React::ScalarPtr<T>, timeSource, getTimeSource, setTimeSource, &Animation::invalidate)
+        REACT_DEFINE_INPUT(React::ScalarPtr<Rt::Range<Math::Vector<F>>>, box, getBox, setBox, &Animation::invalidate)
+        REACT_DEFINE_INPUT(React::ScalarPtr<F>, velocity, getVelocity, setVelocity, &Animation::invalidate)
+        REACT_DEFINE_OUTPUT(React::ScalarPtr<F>, output, getOutput, setOutput, &Animation::evaluate)
+
     private:
-        React::ValuePtr<Rt::Range<Math::Vector<float>>> boxInput;
-        React::ValuePtr<> velocityInput;
-        Rt::Option<float> lastZ;
+        Rt::Option<F> lastZ;
+        std::deque<T> timePoints;
 
     protected:
-        virtual void evaluate(Rt::u8 t);
+        void evaluate() {
+            auto boxLengthZ = box->value().length().z;
+            F z, dt;
 
-    public:
-        static std::shared_ptr<Animation> create(React::ValuePtr<Rt::u8> timeSource,
-                                                 React::ValuePtr<Rt::Range<Math::Vector<float>>> boxInput,
-                                                 React::ValuePtr<> velocityInput,
-                                                 Rt::Option<React::ValuePtr<>> output = Rt::Option<React::ValuePtr<>>());
+            auto t = timeSource->value();
+            auto iter = this->timePoints.begin();
+            if (iter != this->timePoints.end()) {
+                dt = F(double(t - *iter) / 100000000.0);
+                *iter = t;
+            }
+            else {
+                this->timePoints.push_front(t);
+                dt = F(0);
+            }
 
-        React::ValuePtr<Rt::Range<Math::Vector<float>>> getBoxInput();
-        void setBoxInput(React::ValuePtr<Rt::Range<Math::Vector<float>>> box);
+            z = lastZ.getOrElse(0.0f) + velocity->value() * dt;
+            auto n = std::trunc(z / boxLengthZ);
+            z -= n * boxLengthZ;
 
-        React::ValuePtr<> getVelocityInput();
-        void setVelocityInput(React::ValuePtr<> velocity);
+            lastZ.define(z);
+printf("%f\n", z);
+            output->set(z);
+            this->commit(output);
+        }
+
+        void invalidate() {
+            if (output.get())
+                output->invalidate();
+        }
     };
 }
 

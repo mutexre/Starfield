@@ -3,49 +3,55 @@
 
 namespace Starfield
 {
-    class Model : public Rt::Object
+    struct Star {
+        float size;
+        Math::Vector<float> position;
+        Color::RGB<float> color;
+    };
+
+    class Model : public React::Transform<Model>
     {
     public:
-        struct Star {
-            float size;
-            Math::Vector<float> position;
-            Color::RGB<float> color;
-        };
-
         typedef std::shared_ptr<Math::Distribution::Bounded<float>> SizeDistribution;
         typedef std::shared_ptr<Math::Distribution::Bounded<Math::Vector<float>>> SpatialDistribution;
         typedef std::shared_ptr<Math::Distribution::Unbounded<Color::RGB<>>> ColorDistribution;
 
-    public:
-        std::vector<Star> stars;
+        REACT_DEFINE_INPUT(React::ScalarPtr<Rt::u4>, numberOfStars, getNumberOfStars, setNumberOfStars, &Model::invalidate)
+        REACT_DEFINE_INPUT(React::ScalarPtr<Rt::Range<Math::Vector<float>>>, box, getBox, setBox, &Model::invalidate)
+        REACT_DEFINE_INPUT(React::ScalarPtr<SizeDistribution>, sizeDistribution, getSizeDistribution, setSizeDistribution, &Model::invalidate)
+        REACT_DEFINE_INPUT(React::ScalarPtr<SpatialDistribution>, spatialDistribution, getSpatialDistribution, setSpatialDistribution, &Model::invalidate)
+        REACT_DEFINE_INPUT(React::ScalarPtr<ColorDistribution>, colorDistribution, getColorDistribution, setColorDistribution, &Model::invalidate)
+        REACT_DEFINE_OUTPUT(React::ScalarPtr<std::vector<Star>>, stars, getStars, setStars, &Model::evaluate)
 
     protected:
-        Rt::u4 numberOfStars;
-        React::ValuePtr<Rt::Range<Math::Vector<float>>> box;
+        void evaluate() {
+            auto stars = std::vector<Star>(numberOfStars->get());
+            auto& sizeDistr = sizeDistribution->get();
+            auto& spatialDistr = spatialDistribution->get();
+            auto& colorDistr = colorDistribution->get();
 
-        struct {
-            SizeDistribution size;
-            SpatialDistribution spatial;
-            ColorDistribution color;
+            for (auto& star : stars) {
+                star.size = sizeDistr->sample();
+                star.position = spatialDistr->sample();
+                star.color = colorDistr->sample();
+            }
+
+            std::sort(stars.begin(), stars.end(), [](const Star& a, const Star& b) -> bool {
+                return a.position.z > b.position.z;
+            });
+
+            this->stars->set(stars);
+            commit(this->stars);
         }
-        distributions;
 
-    protected:
-        void generateStars();
+        void invalidate() {
+            if (stars.get())
+                stars->invalidate();
+        }
 
     public:
-        Model();
-        Model(Rt::u4 numberOfStars,
-              SizeDistribution sizeDistr,
-              SpatialDistribution spatialDistribution,
-              ColorDistribution colorDistr);
-
+        Model() {}
         virtual ~Model() {}
-
-        Rt::u4 getNumberOfStars() const;
-        void setNumberOfStars(Rt::u4);
-
-        Rt::Range<Math::Vector<float>> getBox() const;
     };
 }
 

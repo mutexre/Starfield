@@ -5,27 +5,31 @@ namespace Starfield
 {
     class Object : public SG::Object
     {
-    public:
+    private:
         Rt::u4 numberOfStars;
 
     public:
-        Object(std::shared_ptr<Model> model, std::shared_ptr<SG::Program> program, std::shared_ptr<SG::Material> material) {
-            auto data = std::make_shared<Data>(model);
-            auto dataBinding = std::make_shared<SG::DataBinding>(data, program);
-            auto drawCall = std::make_shared<SG::DrawCall>(GL_POINTS, 0, model->getNumberOfStars());
+        React::ScalarPtr<std::shared_ptr<SG::Data>> data;
+        React::ScalarPtr<std::shared_ptr<SG::DrawCall>> drawCall;
+        React::ScalarPtr<std::set<std::string>> disabledArrays;
+        React::ScalarPtr<std::shared_ptr<SG::DataBinding>> dataBinding;
+
+    public:
+        Object() {}
+        
+        Object(const React::ScalarPtr<std::shared_ptr<SG::Program>>& program,
+               const React::ScalarPtr<std::shared_ptr<SG::Material>>& material)
+        {
+            data = React::makeScalarPtr(std::make_shared<SG::Data>());
+            disabledArrays = React::makeScalarPtr<std::set<std::string>>();
+            dataBinding = React::makeScalarPtr(std::make_shared<SG::DataBinding>());
+            drawCall = React::makeScalarPtr(std::make_shared<SG::DrawCall>());
             auto segment = std::make_shared<SG::Segment>(dataBinding, drawCall, program, material, false);
             add(segment);
 
-            program->bind();
-            auto location = program->get()->getAttributeLocation("color");
+            program->value()->bind();
+            auto location = program->value()->get()->getAttributeLocation("color");
             if (location.defined) glVertexAttrib4f(location.get(), 1.0f, 1.0f, 1.0f, 0.99f);
-
-            auto box = model->getBox();
-            auto zSize = box.length().z;
-            auto minZ = box.a.z;
-
-            program->setVariable("zSize", (const Rt::u1*)&zSize);
-            program->setVariable("minZ", (const Rt::u1*)&minZ);
         }
 
 #if 0

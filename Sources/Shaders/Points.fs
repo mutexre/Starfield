@@ -28,5 +28,5 @@ void main()
     float fragmentToPovDamp = 1.0f / pow(distFromFragmentToPov, dampingFactor);
 */
     fragmentColor = vec4(color.r, color.g, color.b, coeff);
-    //fragmentColor = vec4(1.0f, 1.0f, 1.0f, 1.0f);
+//    fragmentColor = vec4(1.0f, 0.0f, 0.0f, 1.0f);
 }

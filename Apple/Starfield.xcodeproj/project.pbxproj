@@ -7,24 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		922C7BFF18C5A6780092A7E4 /* InitStarfield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 922C7BF818C5A5E20092A7E4 /* InitStarfield.cpp */; };
-		922C7C0018C5A67A0092A7E4 /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 922C7BFA18C5A5E20092A7E4 /* Model.cpp */; };
-		922C7C0518C5D7970092A7E4 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 922C7C0418C5D7970092A7E4 /* Animation.cpp */; };
+		9248032A1905B31E00FF1BBC /* Bootstrap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924803211905B31E00FF1BBC /* Bootstrap.cpp */; };
+		9248032B1905B31E00FF1BBC /* Events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924803271905B31E00FF1BBC /* Events.cpp */; };
+		9248032C1905B31E00FF1BBC /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924803281905B31E00FF1BBC /* Main.cpp */; };
+		9262E08819117B2400B63AD6 /* Points.fs in Resources */ = {isa = PBXBuildFile; fileRef = 922C7C0218C5D6DF0092A7E4 /* Points.fs */; };
+		9262E08919117B2400B63AD6 /* Points.vs in Resources */ = {isa = PBXBuildFile; fileRef = 922C7C0318C5D6DF0092A7E4 /* Points.vs */; };
+		9262E08A19117B3300B63AD6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926E45F41901B61A0026B080 /* MainMenu.xib */; };
+		926E45BD1901B51F0026B080 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926E45BC1901B51F0026B080 /* Cocoa.framework */; };
+		926E45F21901B6040026B080 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 926E45F01901B6040026B080 /* AppDelegate.mm */; };
+		926E45F31901B6040026B080 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 926E45F11901B6040026B080 /* main.mm */; };
+		926E45F81901B6230026B080 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 926E45F71901B6230026B080 /* Info.plist */; };
+		926E45FE1901B7D80026B080 /* Events.mm in Sources */ = {isa = PBXBuildFile; fileRef = 926E45FA1901B7D80026B080 /* Events.mm */; };
+		926E45FF1901B7D80026B080 /* Init.mm in Sources */ = {isa = PBXBuildFile; fileRef = 926E45FB1901B7D80026B080 /* Init.mm */; };
+		926E46001901B7D80026B080 /* Main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 926E45FC1901B7D80026B080 /* Main.mm */; };
+		926E46031901BA0B0026B080 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926E46021901BA0B0026B080 /* OpenGL.framework */; };
+		926E46051901BA1E0026B080 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926E46041901BA1E0026B080 /* CoreVideo.framework */; };
+		92879F1218E3379800E7B697 /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 92879F1118E3379800E7B697 /* Model.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9215F47E18C3533C00DC8209 /* libStarfield.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStarfield.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		922C7BF618C5A5E20092A7E4 /* Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Animation.h; path = Starfield/Animation.h; sourceTree = "<group>"; };
-		922C7BF718C5A5E20092A7E4 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Data.h; path = Starfield/Data.h; sourceTree = "<group>"; };
-		922C7BF818C5A5E20092A7E4 /* InitStarfield.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = InitStarfield.cpp; path = Starfield/InitStarfield.cpp; sourceTree = "<group>"; };
-		922C7BF918C5A5E20092A7E4 /* InitStarfield.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InitStarfield.h; path = Starfield/InitStarfield.h; sourceTree = "<group>"; };
-		922C7BFA18C5A5E20092A7E4 /* Model.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Model.cpp; path = Starfield/Model.cpp; sourceTree = "<group>"; };
-		922C7BFB18C5A5E20092A7E4 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Model.h; path = Starfield/Model.h; sourceTree = "<group>"; };
+		922C7BF718C5A5E20092A7E4 /* Cpu2GpuProjection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Cpu2GpuProjection.h; path = Starfield/Cpu2GpuProjection.h; sourceTree = "<group>"; };
 		922C7BFC18C5A5E20092A7E4 /* Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Object.h; path = Starfield/Object.h; sourceTree = "<group>"; };
 		922C7BFD18C5A5E20092A7E4 /* Starfield.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Starfield.h; path = Starfield/Starfield.h; sourceTree = "<group>"; };
 		922C7C0218C5D6DF0092A7E4 /* Points.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Points.fs; path = Shaders/Points.fs; sourceTree = "<group>"; };
 		922C7C0318C5D6DF0092A7E4 /* Points.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Points.vs; path = Shaders/Points.vs; sourceTree = "<group>"; };
-		922C7C0418C5D7970092A7E4 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Animation.cpp; path = Starfield/Animation.cpp; sourceTree = "<group>"; };
+		924803211905B31E00FF1BBC /* Bootstrap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bootstrap.cpp; sourceTree = "<group>"; };
+		924803221905B31E00FF1BBC /* Materials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Materials.h; sourceTree = "<group>"; };
+		924803231905B31E00FF1BBC /* Matrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrices.h; sourceTree = "<group>"; };
+		924803241905B31E00FF1BBC /* Programs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Programs.h; sourceTree = "<group>"; };
+		924803251905B31E00FF1BBC /* ProgramsSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramsSources.h; sourceTree = "<group>"; };
+		924803261905B31E00FF1BBC /* Transforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transforms.h; sourceTree = "<group>"; };
+		924803271905B31E00FF1BBC /* Events.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Events.cpp; sourceTree = "<group>"; };
+		924803281905B31E00FF1BBC /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		924803291905B31E00FF1BBC /* Starfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Starfield.h; sourceTree = "<group>"; };
+		926BFE2F191F510F00E968A9 /* Partition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Partition.h; path = Starfield/Partition.h; sourceTree = "<group>"; };
+		926E45BA1901B51F0026B080 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		926E45BC1901B51F0026B080 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		926E45BF1901B51F0026B080 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		926E45C01901B51F0026B080 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		926E45C11901B51F0026B080 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		926E45DB1901B5200026B080 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		926E45EE1901B5F20026B080 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Sources/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		926E45EF1901B5FB0026B080 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = Sources/Prefix.pch; sourceTree = SOURCE_ROOT; };
+		926E45F01901B6040026B080 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Sources/AppDelegate.mm; sourceTree = SOURCE_ROOT; };
+		926E45F11901B6040026B080 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = Sources/main.mm; sourceTree = SOURCE_ROOT; };
+		926E45F51901B61A0026B080 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Sources/Base.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		926E45F71901B6230026B080 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
+		926E45FA1901B7D80026B080 /* Events.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Events.mm; sourceTree = "<group>"; };
+		926E45FB1901B7D80026B080 /* Init.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Init.mm; sourceTree = "<group>"; };
+		926E45FC1901B7D80026B080 /* Main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Main.mm; sourceTree = "<group>"; };
+		926E45FD1901B7D80026B080 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		926E46021901BA0B0026B080 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		926E46041901BA1E0026B080 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		92879F1118E3379800E7B697 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = Starfield/Model.h; sourceTree = "<group>"; };
+		92879F1318E3573100E7B697 /* Distributions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Distributions.h; path = Starfield/Distributions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +73,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		926E45B71901B51F0026B080 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926E46051901BA1E0026B080 /* CoreVideo.framework in Frameworks */,
+				926E46031901BA0B0026B080 /* OpenGL.framework in Frameworks */,
+				926E45BD1901B51F0026B080 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				922C7BF018C5A5E20092A7E4 /* Sources */,
+				9248031F1905B31E00FF1BBC /* Test */,
+				926E45BB1901B51F0026B080 /* Frameworks */,
 				9215F47F18C3533C00DC8209 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9215F47E18C3533C00DC8209 /* libStarfield.a */,
+				926E45BA1901B51F0026B080 /* Test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,14 +110,12 @@
 			children = (
 				922C7C0118C5D6C90092A7E4 /* Shaders */,
 				922C7BFD18C5A5E20092A7E4 /* Starfield.h */,
-				922C7BFB18C5A5E20092A7E4 /* Model.h */,
-				922C7BFA18C5A5E20092A7E4 /* Model.cpp */,
-				922C7BF718C5A5E20092A7E4 /* Data.h */,
+				92879F1118E3379800E7B697 /* Model.h */,
+				926BFE2F191F510F00E968A9 /* Partition.h */,
 				922C7BFC18C5A5E20092A7E4 /* Object.h */,
+				922C7BF718C5A5E20092A7E4 /* Cpu2GpuProjection.h */,
 				922C7BF618C5A5E20092A7E4 /* Animation.h */,
-				922C7C0418C5D7970092A7E4 /* Animation.cpp */,
-				922C7BF918C5A5E20092A7E4 /* InitStarfield.h */,
-				922C7BF818C5A5E20092A7E4 /* InitStarfield.cpp */,
+				92879F1318E3573100E7B697 /* Distributions.h */,
 			);
 			name = Sources;
 			path = ../Sources;
@@ -75,11 +124,85 @@
 		922C7C0118C5D6C90092A7E4 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				922C7C0218C5D6DF0092A7E4 /* Points.fs */,
 				922C7C0318C5D6DF0092A7E4 /* Points.vs */,
+				922C7C0218C5D6DF0092A7E4 /* Points.fs */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
+		};
+		9248031F1905B31E00FF1BBC /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				9262E0871911798100B63AD6 /* Starfield */,
+				926E45F91901B7D80026B080 /* OpenGLView */,
+				926E45EE1901B5F20026B080 /* AppDelegate.h */,
+				926E45F01901B6040026B080 /* AppDelegate.mm */,
+				926E45F11901B6040026B080 /* main.mm */,
+				926E45EF1901B5FB0026B080 /* Prefix.pch */,
+				926E45F41901B61A0026B080 /* MainMenu.xib */,
+				926E45F71901B6230026B080 /* Info.plist */,
+			);
+			name = Test;
+			path = ../Sources/Test;
+			sourceTree = "<group>";
+		};
+		924803201905B31E00FF1BBC /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				924803221905B31E00FF1BBC /* Materials.h */,
+				924803231905B31E00FF1BBC /* Matrices.h */,
+				924803241905B31E00FF1BBC /* Programs.h */,
+				924803251905B31E00FF1BBC /* ProgramsSources.h */,
+				924803261905B31E00FF1BBC /* Transforms.h */,
+				924803211905B31E00FF1BBC /* Bootstrap.cpp */,
+			);
+			path = Bootstrap;
+			sourceTree = "<group>";
+		};
+		9262E0871911798100B63AD6 /* Starfield */ = {
+			isa = PBXGroup;
+			children = (
+				924803201905B31E00FF1BBC /* Bootstrap */,
+				924803271905B31E00FF1BBC /* Events.cpp */,
+				924803281905B31E00FF1BBC /* Main.cpp */,
+				924803291905B31E00FF1BBC /* Starfield.h */,
+			);
+			name = Starfield;
+			sourceTree = "<group>";
+		};
+		926E45BB1901B51F0026B080 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				926E46041901BA1E0026B080 /* CoreVideo.framework */,
+				926E46021901BA0B0026B080 /* OpenGL.framework */,
+				926E45BC1901B51F0026B080 /* Cocoa.framework */,
+				926E45DB1901B5200026B080 /* XCTest.framework */,
+				926E45BE1901B51F0026B080 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		926E45BE1901B51F0026B080 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				926E45BF1901B51F0026B080 /* AppKit.framework */,
+				926E45C01901B51F0026B080 /* CoreData.framework */,
+				926E45C11901B51F0026B080 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		926E45F91901B7D80026B080 /* OpenGLView */ = {
+			isa = PBXGroup;
+			children = (
+				926E45FA1901B7D80026B080 /* Events.mm */,
+				926E45FB1901B7D80026B080 /* Init.mm */,
+				926E45FC1901B7D80026B080 /* Main.mm */,
+				926E45FD1901B7D80026B080 /* OpenGLView.h */,
+			);
+			name = OpenGLView;
+			path = Sources/OpenGLView;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -88,6 +211,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92879F1218E3379800E7B697 /* Model.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +235,23 @@
 			productReference = 9215F47E18C3533C00DC8209 /* libStarfield.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		926E45B91901B51F0026B080 /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 926E45E81901B5200026B080 /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				926E45B61901B51F0026B080 /* Sources */,
+				926E45B71901B51F0026B080 /* Frameworks */,
+				926E45B81901B51F0026B080 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Test;
+			productName = Test;
+			productReference = 926E45BA1901B51F0026B080 /* Test.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,6 +266,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9215F47318C3530C00DC8209;
 			productRefGroup = 9215F47F18C3533C00DC8209 /* Products */;
@@ -132,22 +274,61 @@
 			projectRoot = "";
 			targets = (
 				9215F47D18C3533B00DC8209 /* Starfield */,
+				926E45B91901B51F0026B080 /* Test */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		926E45B81901B51F0026B080 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926E45F81901B6230026B080 /* Info.plist in Resources */,
+				9262E08A19117B3300B63AD6 /* MainMenu.xib in Resources */,
+				9262E08819117B2400B63AD6 /* Points.fs in Resources */,
+				9262E08919117B2400B63AD6 /* Points.vs in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9215F47A18C3533B00DC8209 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922C7BFF18C5A6780092A7E4 /* InitStarfield.cpp in Sources */,
-				922C7C0018C5A67A0092A7E4 /* Model.cpp in Sources */,
-				922C7C0518C5D7970092A7E4 /* Animation.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		926E45B61901B51F0026B080 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926E45FE1901B7D80026B080 /* Events.mm in Sources */,
+				926E45F31901B6040026B080 /* main.mm in Sources */,
+				9248032B1905B31E00FF1BBC /* Events.cpp in Sources */,
+				9248032A1905B31E00FF1BBC /* Bootstrap.cpp in Sources */,
+				926E46001901B7D80026B080 /* Main.mm in Sources */,
+				926E45F21901B6040026B080 /* AppDelegate.mm in Sources */,
+				9248032C1905B31E00FF1BBC /* Main.cpp in Sources */,
+				926E45FF1901B7D80026B080 /* Init.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		926E45F41901B61A0026B080 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				926E45F51901B61A0026B080 /* Base */,
+			);
+			name = MainMenu.xib;
+			path = ../../Apple/Test;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9215F47818C3530C00DC8209 /* Debug */ = {
@@ -160,9 +341,11 @@
 					"${BOOST}",
 					"${RAPIDXML}/",
 					"${BASE}/Sources/",
+					"${BASE}/Apple/Sources",
 					../Sources,
 					Sources,
 				);
+				LIBRARY_SEARCH_PATHS = "${BASE}/Apple/build/${CONFIGURATION}";
 				RAPIDXML = ../../rapidxml;
 			};
 			name = Debug;
@@ -177,9 +360,11 @@
 					"${BOOST}",
 					"${RAPIDXML}/",
 					"${BASE}/Sources/",
+					"${BASE}/Apple/Sources",
 					../Sources,
 					Sources,
 				);
+				LIBRARY_SEARCH_PATHS = "${BASE}/Apple/build/${CONFIGURATION}";
 				RAPIDXML = ../../rapidxml;
 			};
 			name = Release;
@@ -258,6 +443,92 @@
 			};
 			name = Release;
 		};
+		926E45E91901B5200026B080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Sources/Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Sources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lBase";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		926E45EA1901B5200026B080 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Sources/Prefix.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Sources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "-lBase";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -275,6 +546,15 @@
 			buildConfigurations = (
 				9215F48118C3533C00DC8209 /* Debug */,
 				9215F48218C3533C00DC8209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		926E45E81901B5200026B080 /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				926E45E91901B5200026B080 /* Debug */,
+				926E45EA1901B5200026B080 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

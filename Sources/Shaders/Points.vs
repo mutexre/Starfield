@@ -33,5 +33,7 @@ void main()
     gl_PointSize = pointSize;
     vfColor = color;
 
-	//gl_Position = vec4(0.0f, 0.0f, 0.0f, 1.0f);
+//	gl_Position = vec4(0.0f, 0.0f, 0.0f, 1.0f);
+//    vfColor = vec3(1.0f, 1.0f, 1.0f);
+    gl_PointSize = 2.0f;
 }

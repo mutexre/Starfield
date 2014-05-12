@@ -1,12 +1,13 @@
-#include <Starfield/Starfield.h>
+#ifndef header_E1A2252D4F2E
+#define header_E1A2252D4F2E
 
-template <typename T>
-static T mix(T a, T b, T x) {
-    return x * a + (T(1) - x) * b;
-}
-
-Starfield::Model* Starfield::createModel(Rt::u4 numberOfStars, float velocity)
+namespace Starfield
 {
+    template <typename T>
+    static T mix(T a, T b, T x) {
+        return x * a + (T(1) - x) * b;
+    }
+
     class SpatialDistribution : public Math::Distribution::Bounded<Math::Vector<float>>
     {
     private:
@@ -126,34 +127,6 @@ Starfield::Model* Starfield::createModel(Rt::u4 numberOfStars, float velocity)
             return Color::hsv2rgb(Color::HSV<float>(h, s, v));
         }
     };
-
-    struct {
-        Starfield::Model::SizeDistribution size;
-        Starfield::Model::ColorDistribution color;
-        Starfield::Model::SpatialDistribution spatial;
-    }
-    distributions;
-
-    distributions.size = std::shared_ptr<Math::Distribution::Bounded<float>>(new Math::Distribution::Uniform<float>(Rt::Range<float>(1.0f, 2.0f)));
-
-    auto spatialDistributionRange = Rt::Range<Math::Vector<float>>(Math::Vector<float>(-1.0f, -1.0f, 0.0f),
-                                                                   Math::Vector<float>( 2.0f,  2.0f, 4.0f));
-
-    distributions.spatial = std::shared_ptr<Math::Distribution::Bounded<Math::Vector<float>>>(new SpatialDistribution(spatialDistributionRange));
-
-    float range = 0.1f;
-    Rt::Range<float> colorDistributionRanges[] = {
-        Rt::Range<float>(0.0f - range / 2.0f, range),
-        Rt::Range<float>(0.66f - range / 2.0f, range)
-    };
-
-    distributions.color = std::shared_ptr<Math::Distribution::Unbounded<Color::RGB<float>>>(new MixColorDistribution2(colorDistributionRanges[0],
-                                                                                                                      colorDistributionRanges[1],
-                                                                                                                      Rt::Range<float>(0.0f, 0.35f),
-                                                                                                                      Rt::Range<float>(0.7f, 0.3f)));
-
-    return new Starfield::Model(numberOfStars,
-                                distributions.size,
-                                distributions.spatial,
-                                distributions.color);
 }
+
+#endif
