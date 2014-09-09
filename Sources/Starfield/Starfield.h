@@ -10,7 +10,6 @@
 #include <Starfield/Model.h>
 #include <Starfield/Partition.h>
 #include <Starfield/Cpu2GpuProjection.h>
-#include <Starfield/Object.h>
 #include <Starfield/Animation.h>
 #include <Starfield/Distributions.h>
 

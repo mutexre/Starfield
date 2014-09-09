@@ -12,9 +12,9 @@ namespace Starfield
     class Model : public React::Transform<Model>
     {
     public:
-        typedef std::shared_ptr<Math::Distribution::Bounded<float>> SizeDistribution;
-        typedef std::shared_ptr<Math::Distribution::Bounded<Math::Vector<float>>> SpatialDistribution;
-        typedef std::shared_ptr<Math::Distribution::Unbounded<Color::RGB<>>> ColorDistribution;
+        using SizeDistribution = std::shared_ptr<Math::Distribution::Bounded<float>>;
+        using SpatialDistribution = std::shared_ptr<Math::Distribution::Bounded<Math::Vector<float>>>;
+        using ColorDistribution = std::shared_ptr<Math::Distribution::Unbounded<Color::RGB<>>>;
 
         REACT_DEFINE_INPUT(React::ScalarPtr<Rt::u4>, numberOfStars, getNumberOfStars, setNumberOfStars, &Model::invalidate)
         REACT_DEFINE_INPUT(React::ScalarPtr<Rt::Range<Math::Vector<float>>>, box, getBox, setBox, &Model::invalidate)

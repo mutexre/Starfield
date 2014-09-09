@@ -31,7 +31,6 @@ namespace Starfield
 
         struct {
             std::shared_ptr<Starfield::Model> model;
-            std::shared_ptr<Starfield::Object> object;
             std::shared_ptr<Starfield::Animation<Rt::u8, float>> animation;
             std::shared_ptr<Starfield::Cpu2GpuProjection> cpu2gpu;
             std::shared_ptr<SG::BindData> binder;
@@ -71,13 +70,11 @@ namespace Starfield
                     std::shared_ptr<React::Box<float>> z, scale, minZ, zSize;
                 }
                 box;
+
+                React::ScalarPtr<std::shared_ptr<SG::Object>> object;
             }
             starfield;
 
-            React::MatrixPtr<float> objectsScale;
-            React::MatrixPtr<float> objectsRotation;
-            React::MatrixPtr<float> objectsTranslate;
-            React::MatrixPtr<float> pov;
             React::ScalarPtr<float> aspectRatio;
             React::ScalarPtr<Rt::u8> time;
 

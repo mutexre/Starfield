@@ -92,11 +92,6 @@ void Starfield::Main::onGlReady()
     vars.aspectRatio = React::makeScalarPtr<float>();
     vars.aspectRatio->setName("vars.aspectRatio");
 
-    vars.objectsRotation = React::makeMatrix();
-    vars.objectsScale = React::makeMatrix();
-    vars.objectsTranslate = React::makeMatrix();
-    vars.pov = React::makeMatrix();
-
 // Starfield Vars
     vars.starfield.stars = React::makeScalarPtr<std::vector<Starfield::Star>>();
     vars.starfield.stars->setName("vars.starfield.stars");
@@ -152,7 +147,7 @@ void Starfield::Main::onGlReady()
     starfield.model->setColorDistribution(vars.starfield.colorDistribution);
     starfield.model->setStars(vars.starfield.stars);
 
-    starfield.object = std::make_shared<Starfield::Object>(programs->starfield, materials->starfield);
+    vars.starfield.object = React::makeScalarPtr(std::make_shared<SG::Object>(/*programs->starfield, materials->starfield*/));
 
     starfield.animation = std::make_shared<Starfield::Animation<Rt::u8, float>>();
     starfield.animation->setBox(vars.starfield.volume);
@@ -162,14 +157,17 @@ void Starfield::Main::onGlReady()
 
     starfield.cpu2gpu = std::make_shared<Starfield::Cpu2GpuProjection>();
     starfield.cpu2gpu->setStars(vars.starfield.stars);
-    starfield.cpu2gpu->setData(starfield.object->data);
-    starfield.cpu2gpu->setDrawCall(starfield.object->drawCall);
+    starfield.cpu2gpu->setProgram(programs->starfield);
+    starfield.cpu2gpu->setMaterial(materials->starfield);
+    starfield.cpu2gpu->setObject(vars.starfield.object);
+//    starfield.cpu2gpu->setData(vars.starfield.object->data);
+//    starfield.cpu2gpu->setDrawCall(vars.starfield.object->drawCall);
 
-    starfield.binder = std::make_shared<SG::BindData>();
-    starfield.binder->setData(starfield.object->data);
+/*    starfield.binder = std::make_shared<SG::BindData>();
+    starfield.binder->setData(vars.starfield.object->data);
     starfield.binder->setProgram(programs->starfield);
     starfield.binder->setDisabledArrays(vars.starfield.disabledArrays);
-    starfield.binder->setDataBinding(starfield.object->dataBinding);
+    starfield.binder->setDataBinding(vars.starfield.object->dataBinding);*/
 
 //    starfield.object->enableDepthTest(false);
 
@@ -220,25 +218,25 @@ void Starfield::Main::onGlReady()
 
 // -----------------
 
-    order->add(starfield.object);
-    objectsGroup->add(starfield.object);
+    order->add(vars.starfield.object);
+    objectsGroup->add(vars.starfield.object);
 
     view->setObjects(objectsGroup);
     view->setOrder(order);
 
-    view->setVisibility(starfield.object, vars.starfield.visibility);
+    view->setVisibility(vars.starfield.object, vars.starfield.visibility);
 
     matrices->perspective->set(Math::PerspectiveProjection<float>(M_PI / 4.0f, 0.01f, 300.0f));
     matrices->starfield->set(Math::Scale<float>(1.0f, 1.0f, -1.0f));
 
 // Vars Bindings
     view->bind("aspectRatio", vars.box.aspectRatio->getOutput());
-    view->bind(starfield.object, "projection", matrices->perspective);
-    view->bind(starfield.object, "transform", transforms->starfield->getOutput());
-    view->bind(starfield.object, "z", vars.starfield.box.z->getOutput());
-    view->bind(starfield.object, "scale", vars.starfield.box.scale->getOutput());
-    view->bind(starfield.object, "minZ", vars.starfield.box.minZ->getOutput());
-    view->bind(starfield.object, "zSize", vars.starfield.box.zSize->getOutput());
+    view->bind(vars.starfield.object, "projection", matrices->perspective);
+    view->bind(vars.starfield.object, "transform", transforms->starfield->getOutput());
+    view->bind(vars.starfield.object, "z", vars.starfield.box.z->getOutput());
+    view->bind(vars.starfield.object, "scale", vars.starfield.box.scale->getOutput());
+    view->bind(vars.starfield.object, "minZ", vars.starfield.box.minZ->getOutput());
+    view->bind(vars.starfield.object, "zSize", vars.starfield.box.zSize->getOutput());
 
     initAnimations();
 }
