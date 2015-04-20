@@ -4,8 +4,8 @@
 
 @implementation OpenGLView
 
-- (void)prepareScene:(Rt::u8)t {
-    starfield->prepareScene(t);
+- (void)setTime:(Rt::u8)t {
+    starfield->setTime(t);
     [self setNeedsDisplay:YES];
 }
 

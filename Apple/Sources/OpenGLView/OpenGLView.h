@@ -11,15 +11,14 @@ typedef boost::bimap<Rt::u4, UI::Key> Keymap;
     Keymap keymap;
 }
 
-- (void)prepareScene;
+- (void)setTime:(Rt::u8)t;
 - (void)drawScene;
 
 @end
 
 @interface OpenGLView(Init)
 
-- (void)setGLOptions;
-- (void)onGlReady;
+- (void)configure;
 
 @end
 

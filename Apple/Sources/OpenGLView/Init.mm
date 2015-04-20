@@ -2,7 +2,9 @@
 #import <GLCPP/ObjC/Subroutines.h>
 #import <string.h>
 
-Keymap createKeymap() {
+@implementation OpenGLView (Init)
+
+- (Keymap)createKeymap {
     Keymap map;
 
     map.left.insert(std::pair<Rt::u4, UI::Key>(49, UI::Key::space));
@@ -34,16 +36,9 @@ Keymap createKeymap() {
     return map;
 }
 
-@implementation OpenGLView (Init)
-
-- (void)setGLOptions {
-    starfield->setGLOptions();
-}
-
-- (void)onGlReady {
-    keymap = createKeymap();
+- (void)configure {
+    keymap = [self createKeymap];
     starfield = std::unique_ptr<Starfield::Main>(new Starfield::Main([[[NSBundle mainBundle] resourcePath] UTF8String]));
-    starfield->onGlReady();
 }
 
 @end

@@ -1,7 +1,7 @@
 #include <stdafx.h>
 #include <Test/Starfield.h>
 
-void Starfield::Main::prepareScene(Rt::u8 t) {
+void Starfield::Main::setTime(Rt::u8 t) {
     vars.time->set(t);
     vars.time->commit();
 }

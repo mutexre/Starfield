@@ -91,16 +91,16 @@ namespace Starfield
         animations;
 
     private:
+        void setGLOptions();
         void initStarfieldAnimation();
         void initAnimations();
 
     public:
         Main(const std::string& resourcesPath);
 
-        void setGLOptions();
-        void onGlReady();
+        void configure();
 
-        void prepareScene(Rt::u8 t);
+        void setTime(Rt::u8 t);
         void drawScene();
         void syncData(bool updateStarsData);
 

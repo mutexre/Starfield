@@ -3,6 +3,9 @@
 
 Starfield::Main::Main(const std::string& resourcesPath) {
     this->resourcesPath = resourcesPath;
+    setGLOptions();
+    configure();
+    initAnimations();
 }
 
 void Starfield::Main::setGLOptions() {
@@ -72,7 +75,7 @@ std::vector<T> convertArrayToVector(const T* array, Rt::u4 n) {
     return retval;
 }
 
-void Starfield::Main::onGlReady()
+void Starfield::Main::configure()
 {
     programSrc = std::unique_ptr<ProgramSrc>(new ProgramSrc(resourcesPath));
     programs = std::unique_ptr<Programs>(new Programs(programSrc.get()));
@@ -237,6 +240,4 @@ void Starfield::Main::onGlReady()
     view->bind(vars.starfield.object, "scale", vars.starfield.box.scale->getOutput());
     view->bind(vars.starfield.object, "minZ", vars.starfield.box.minZ->getOutput());
     view->bind(vars.starfield.object, "zSize", vars.starfield.box.zSize->getOutput());
-
-    initAnimations();
 }
